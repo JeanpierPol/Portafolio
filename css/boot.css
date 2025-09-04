@@ -1,0 +1,25 @@
+/* Boot screen styles */
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2000;
+}
+
+#boot-screen pre {
+    white-space: pre-wrap;
+    margin: 0;
+    line-height: 1.2;
+}
+
+

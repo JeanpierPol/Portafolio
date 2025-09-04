@@ -1,0 +1,55 @@
+/* Desktop container styles */
+.desktop-container {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    width: 80px;
+    user-select: none;
+    touch-action: none;
+    box-sizing: border-box;
+}
+
+.icon.is-dragging {
+    opacity: 0.5;
+}
+
+.icon.drag-over-active {
+    outline: 2px dashed #fff;
+    outline-offset: -2px;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    pointer-events: none;
+}
+
+.icon span {
+    font-size: 14px;
+    background-color: transparent;
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.icon.selected span,
+.icon:hover span {
+    background-color: var(--blue-acc);
+    color: #fff;
+}
+
+.icon.dragging {
+    z-index: 20;
+}

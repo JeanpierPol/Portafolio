@@ -67,19 +67,31 @@ export default class WindowManager {
         });
       }
 
-      win.addEventListener('mousedown', e => {
-        if (e.target.closest('.window-content') || e.target.closest('.window-title-bar')) return;
-        e.preventDefault();
-        this.isResizing = true;
-        this.currentWindow = win;
-        this.currentWindow.style.zIndex = this.getNextZIndex();
-        const rect = this.currentWindow.getBoundingClientRect();
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        this.resizeDir.top = Math.abs(mouseY - rect.top) < this.edgeTolerance;
-        this.resizeDir.bottom = Math.abs(mouseY - rect.bottom) < this.edgeTolerance;
-        this.resizeDir.left = Math.abs(mouseX - rect.left) < this.edgeTolerance;
-        this.resizeDir.right = Math.abs(mouseX - rect.right) < this.edgeTolerance;
+      // crear asas de redimensionamiento si no existen
+      const handles = ['n','s','e','w','ne','nw','se','sw'];
+      handles.forEach(h => {
+        if (!win.querySelector(`.resize-handle.${h}`)) {
+          const el = document.createElement('div');
+          el.className = `resize-handle ${h}`;
+          win.appendChild(el);
+        }
+      });
+
+      // iniciar redimensionamiento al pulsar en un asa
+      win.querySelectorAll('.resize-handle').forEach(handle => {
+        handle.addEventListener('mousedown', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.isResizing = true;
+          this.currentWindow = win;
+          this.currentWindow.style.zIndex = this.getNextZIndex();
+          const cls = Array.from(handle.classList);
+          this.resizeDir = { top: false, bottom: false, left: false, right: false };
+          if (cls.includes('n')) this.resizeDir.top = true;
+          if (cls.includes('s')) this.resizeDir.bottom = true;
+          if (cls.includes('w')) this.resizeDir.left = true;
+          if (cls.includes('e')) this.resizeDir.right = true;
+        });
       });
 
       closeBtn && closeBtn.addEventListener('click', () => this.close(win.id));

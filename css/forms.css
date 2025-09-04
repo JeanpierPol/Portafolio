@@ -1,0 +1,67 @@
+/* Contact form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: 2px solid var(--black);
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    padding: 4px;
+    background-color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 14px;
+    width: calc(100% - 10px);
+    resize: vertical;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+}
+
+.contact-form button {
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 4px 8px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 8px;
+}
+
+.contact-form button:active {
+    border-top: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+}
+
+/* Message box styles */
+.message-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 10px;
+    min-width: 200px;
+    text-align: center;
+    z-index: 2001;
+}

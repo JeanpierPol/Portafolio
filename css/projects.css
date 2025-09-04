@@ -1,0 +1,124 @@
+/* Toolbar styles */
+.window-toolbar {
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 2px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.window-toolbar .toolbar-button {
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 2px 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.window-toolbar .toolbar-button:active,
+.window-toolbar .toolbar-button.active {
+    border-top: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+}
+
+/* Project files container */
+#project-files-container {
+    padding: 5px;
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* List view styles */
+#project-files-container.view-list {
+    flex-direction: column;
+    gap: 2px;
+}
+
+#project-files-container.view-list .project-file {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px;
+    width: 100%;
+}
+
+#project-files-container.view-list .project-file:hover {
+    background-color: var(--blue-acc);
+    color: #fff;
+}
+
+#project-files-container.view-list .project-file-info {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#project-files-container.view-list .project-file img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+#project-files-container.view-list .project-file-info span {
+    font-size: 14px;
+}
+
+/* Icon view styles */
+#project-files-container.view-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+#project-files-container.view-icons .project-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#project-files-container.view-icons .project-file:hover {
+    background-color: var(--blue-acc);
+    border-color: var(--white);
+    height: 25%;
+}
+
+#project-files-container.view-icons .project-file:hover .project-file-info span {
+    color: #fff;
+}
+
+#project-files-container.view-icons .project-file img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+#project-files-container.view-icons .project-file-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+}
+
+#project-files-container.view-icons .project-file-info span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 12px;
+    display: block;
+}
