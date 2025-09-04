@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/window.css">
     <link rel="stylesheet" href="./css/projects.css">
     <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/modal.css">
     <script type="module" src="./js/main.js"></script>
 </head>
@@ -125,7 +126,7 @@
             </div>
         </div>
 
-        <div id="profile" class="window" style="left: 25%; top: 25%; width: 450px; height: 350px;">
+        <div id="profile" class="window" style="left: 20%; top: 18%; width: 600px; height: 420px;">
             <div class="window-title-bar">
                 <span>Mi_Perfil.inf</span>
                 <div class="window-controls">
@@ -135,15 +136,33 @@
                 </div>
             </div>
             <div class="window-content">
-                <h2>Información de Perfil</h2>
-                <p><strong>Nombre:</strong> Jeanpierrer Núñez</p>
-                <p><strong>Rol:</strong> Desarrollador Web Full Stack</p>
-                <p><strong>Email:</strong> jeanpiernunezsanchez@gmail.com</p>
-                <p><strong>Teléfono:</strong> 633745308</p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeanpierrer/"
-                        target="_blank">linkedin.com/in/jeanpierrer</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/JeanpierPol"
-                        target="_blank">github.com/JeanpierPol</a></p>
+                <div class="profile-header">
+                    <span class="header-title">Mi Perfil</span>
+                </div>
+                <div class="profile-body">
+                    <aside class="profile-pane">
+                        <div class="profile-photo">
+                            <img src="public/user.jpg" alt="Foto de perfil">
+                        </div>
+                        <div class="profile-name">Jeanpierrer Núñez</div>
+                        <div class="profile-actions">
+                            <button class="btn" onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar mensaje</button>
+                            <a class="btn" href="https://github.com/JeanpierPol" target="_blank">Abrir GitHub</a>
+                            <a class="btn" href="https://www.linkedin.com/in/jeanpierrer/" target="_blank">Abrir LinkedIn</a>
+                        </div>
+                    </aside>
+                    <section class="profile-details">
+                        <div class="profile-grid">
+                            <div class="profile-label">Nombre</div><div>Jeanpierrer Núñez</div>
+                            <div class="profile-label">Rol</div><div>Desarrollador Web Full Stack</div>
+                            <div class="profile-label">Email</div><div>jeanpiernunezsanchez@gmail.com</div>
+                            <div class="profile-label">Teléfono</div><div>633745308</div>
+                            <div class="profile-label">Ubicación</div><div>España</div>
+                            <div class="profile-label">Stack</div><div>JS/TS, React, Node, CSS</div>
+                            <div class="profile-label">Experiencia</div><div>+2 años (freelance y prácticas)</div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
 
