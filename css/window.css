@@ -141,6 +141,19 @@
     border-bottom: 2px solid var(--white);
 }
 
+.window-surface {
+    background: #fff;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #c0c0c0;
+    border-bottom: 2px solid #c0c0c0;
+    height: calc(100% - 36px);
+    margin-top: 8px;
+    padding: 8px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
 .window-content p {
     margin-bottom: 8px;
     font-size: 15px;

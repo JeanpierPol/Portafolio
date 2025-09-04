@@ -38,6 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const contactForm = new ContactForm(modalManager);
 
+  // Toggle fast boot with F9
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'F9') {
+      const current = window.localStorage.getItem('skipBoot') === '1';
+      window.localStorage.setItem('skipBoot', current ? '0' : '1');
+      window.location.reload();
+    }
+  });
+
   console.log('Portfolio Win95 inicializado 🚀');
 });
 

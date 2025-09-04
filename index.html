@@ -25,14 +25,17 @@
 
     <div class="desktop-container" id="desktop-container">
         <div class="desktop-icons">
-            <div class="icon" id="icon-about" data-window-id="about" draggable="true">
-                <img src="./public/icons/pdf.png" alt="Mi CV Icono">
-                <span>Mi CV.pdf</span>
-            </div>
+            
             <div class="icon" id="icon-experience" data-window-id="profile" draggable="true">
                 <img src="./public/icons/profile.png" alt="Mi Perfil Icono">
                 <span>Mi Perfil</span>
             </div>
+            
+            <div class="icon" id="icon-about" data-window-id="about" draggable="true">
+                <img src="./public/icons/pdf.png" alt="Mi CV Icono">
+                <span>Mi CV.pdf</span>
+            </div>
+
             <div class="icon" id="icon-projects" data-window-id="projects" draggable="true">
                 <img src="./public/icons/folder.png" alt="Proyectos Icono">
                 <span>Proyectos</span>
@@ -107,19 +110,21 @@
                 <button class="toolbar-button active" id="view-icons-btn">Iconos</button>
             </div>
             <div class="window-content">
-                <div id="project-files-container" class="view-icons">
-                    <div class="project-file" data-project-id="blog">
-                        <img src="./public/icons/folder.png" alt="Icono de Carpeta">
-                        <div class="project-file-info">
-                            <span>Mi_blog_personal.txt</span>
-                            <span>27/08/2025</span>
+                <div class="window-surface">
+                    <div id="project-files-container" class="view-icons">
+                        <div class="project-file" data-project-id="blog">
+                            <img src="./public/icons/folder.png" alt="Icono de Carpeta">
+                            <div class="project-file-info">
+                                <span>Mi_blog_personal.txt</span>
+                                <span>27/08/2025</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-file" data-project-id="landing">
-                        <img src="./public/icons/folder.png" alt="Icono de Carpeta">
-                        <div class="project-file-info">
-                            <span>Clon_Landing_Page.txt</span>
-                            <span>25/08/2025</span>
+                        <div class="project-file" data-project-id="landing">
+                            <img src="./public/icons/folder.png" alt="Icono de Carpeta">
+                            <div class="project-file-info">
+                                <span>Clon_Landing_Page.txt</span>
+                                <span>25/08/2025</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,9 +160,9 @@
                         </nav>
 
                         <div class="profile-actions">
-                            <button class="btn" onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar mensaje</button>
-                            <a class="btn" href="https://github.com/JeanpierPol" target="_blank">Abrir GitHub</a>
-                            <a class="btn" href="https://www.linkedin.com/in/jeanpierrer/" target="_blank">Abrir LinkedIn</a>
+                            <button class="btn"
+                                onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar
+                                mensaje</button>
                         </div>
                     </aside>
                     <section class="profile-details">
@@ -166,7 +171,8 @@
                             <li>
                                 <strong>03/2024 – 06/2024 · Desarrollador web Shopify</strong> – ASTRIDTECH
                                 <ul>
-                                    <li>Diseñado y personalizado tiendas online en Shopify, optimizando UX y navegación.</li>
+                                    <li>Diseñado y personalizado tiendas online en Shopify, optimizando UX y navegación.
+                                    </li>
                                     <li>Configurado y personalizado temas según necesidades del cliente.</li>
                                 </ul>
                             </li>
@@ -188,28 +194,61 @@
 
                         <h3 id="form">Formación</h3>
                         <ul>
-                            <li><strong>01/2025 – 06/2025 · Máster en Desarrollo Web Full Stack</strong> – Evolve Academy</li>
+                            <li><strong>01/2025 – 06/2025 · Máster en Desarrollo Web Full Stack</strong> – Evolve
+                                Academy</li>
                             <li><strong>09/2022 – 06/2024 · DAW</strong> – IES Enrique Tierno Galván</li>
                         </ul>
 
                         <h3 id="comp">Competencias Técnicas</h3>
                         <div class="retro-skills">
-                            <div class="retro-skill"><span>PHP</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>Node.js</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>HTML</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>Bootstrap</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>Vue.js</span><div class="level low"></div></div>
-                            <div class="retro-skill"><span>SQL</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>GitHub</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>Python</span><div class="level low"></div></div>
-                            <div class="retro-skill"><span>Laravel</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>JavaScript</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>CSS</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>SASS</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>React</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>NoSQL</span><div class="level mid"></div></div>
-                            <div class="retro-skill"><span>Spark</span><div class="level low"></div></div>
-                            <div class="retro-skill"><span>Java</span><div class="level mid"></div></div>
+                            <div class="retro-skill"><span>PHP</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>Node.js</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>HTML</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>Bootstrap</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>Vue.js</span>
+                                <div class="level low"></div>
+                            </div>
+                            <div class="retro-skill"><span>SQL</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>GitHub</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>Python</span>
+                                <div class="level low"></div>
+                            </div>
+                            <div class="retro-skill"><span>Laravel</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>JavaScript</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>CSS</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>SASS</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>React</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>NoSQL</span>
+                                <div class="level mid"></div>
+                            </div>
+                            <div class="retro-skill"><span>Spark</span>
+                                <div class="level low"></div>
+                            </div>
+                            <div class="retro-skill"><span>Java</span>
+                                <div class="level mid"></div>
+                            </div>
                         </div>
 
                         <h3 id="idiomas">Idiomas</h3>
@@ -227,7 +266,8 @@
                         <ul>
                             <li>11/2024 – 01/2025 · CFTIC Getafe – Desarrollador Spark Big Data Cloudera (200h)</li>
                             <li>09/2022 – 01/2023 · Vipper Sistemas – Gestión de sistemas informáticos (500h)</li>
-                            <li>06/2022 – 07/2022 · Vipper Sistemas – Fundamentos de administración de bases de datos (60h)</li>
+                            <li>06/2022 – 07/2022 · Vipper Sistemas – Fundamentos de administración de bases de datos
+                                (60h)</li>
                             <li>06/2022 – 07/2022 · Vipper Sistemas – Análisis y programación en Java (60h)</li>
                             <li>05/2021 – 07/2021 · Fundación Tomillo – Desarrollador frontend (100h)</li>
                             <li>09/2020 – 06/2021 · Fundación Tomillo – Desarrollador web Full Stack (1120h)</li>
@@ -271,7 +311,7 @@
                 </div>
                 <div class="start-menu" id="start-menu">
                     <div class="start-menu-item" id="my-profile-btn">
-                        <img src="public/icons/profile.png"User Icon">
+                        <img src="public/icons/profile.png" User Icon">
                         <span>Mi Perfil</span>
                     </div>
                     <div class="start-menu-item" id="shutdown-btn">

@@ -19,7 +19,14 @@ export default class BootScreen {
     this.charIndex = 0;
 
     if (this.bootScreenEl && this.bootTextEl) {
-      this.typeNextChar();
+      const params = new URLSearchParams(window.location.search);
+      const fast = params.get('fast') === '1' || window.localStorage.getItem('skipBoot') === '1';
+      if (fast) {
+        // saltar animación de boot para desarrollo
+        this.finishBootImmediately();
+      } else {
+        this.typeNextChar();
+      }
     }
   }
 
@@ -42,6 +49,11 @@ export default class BootScreen {
         if (this.desktopContainerEl) this.desktopContainerEl.style.display = 'flex';
       }, 1000);
     }
+  }
+
+  finishBootImmediately() {
+    if (this.bootScreenEl) this.bootScreenEl.style.display = 'none';
+    if (this.desktopContainerEl) this.desktopContainerEl.style.display = 'flex';
   }
 }
 
