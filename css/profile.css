@@ -1,5 +1,7 @@
 /* Ventana Mi Perfil - estilo Windows */
-#profile .window-content { padding: 0; }
+#profile .window-content {
+    padding: 0;
+}
 
 .profile-header {
     display: flex;
@@ -12,8 +14,14 @@
     border-bottom: 1px solid #b0b0b0;
 }
 
-.profile-header img { width: 16px; height: 16px; }
-.profile-header .header-title { font-weight: bold; }
+.profile-header img {
+    width: 16px;
+    height: 16px;
+}
+
+.profile-header .header-title {
+    font-weight: bold;
+}
 
 .profile-body {
     display: grid;
@@ -43,11 +51,23 @@
     overflow: hidden;
 }
 
-.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.profile-name { font-size: 20px; margin: 6px 0 10px; }
+.profile-name {
+    font-size: 20px;
+    margin: 6px 0 10px;
+}
 
-.profile-actions { display: flex; flex-direction: column; gap: 6px; }
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .profile-actions .btn {
     background-color: var(--gray-1);
     border-top: 2px solid var(--white);
@@ -65,8 +85,70 @@
     overflow: auto;
 }
 
-.profile-grid { display: grid; grid-template-columns: 160px 1fr; row-gap: 8px; column-gap: 10px; }
-.profile-label { font-weight: bold; }
+.profile-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    row-gap: 8px;
+    column-gap: 10px;
+}
+
+.profile-label {
+    font-weight: bold;
+}
+
+/* Barras retro de habilidades (3 niveles) */
+.retro-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px 14px;
+    margin: 8px 0 14px;
+}
+
+.retro-skill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.retro-skill span {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.retro-skill .level {
+    width: 90px;
+    height: 14px;
+    background: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    position: relative;
+}
+
+.retro-skill .level::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: repeating-linear-gradient(90deg, #00a000 0 6px, #008000 6px 12px);
+}
+
+.retro-skill .level.low::before {
+    width: 33%;
+}
+
+.retro-skill .level.mid::before {
+    width: 66%;
+}
+
+.retro-skill .level.high::before {
+    width: 100%;
+}
 
 /* Perfil estilo Windows */
 #profile .window-content {
@@ -133,6 +215,6 @@
     column-gap: 10px;
 }
 
-.profile-label { font-weight: bold; }
-
-
+.profile-label {
+    font-weight: bold;
+}
