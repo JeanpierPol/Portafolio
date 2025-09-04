@@ -145,6 +145,15 @@
                             <img src="public/user.jpg" alt="Foto de perfil">
                         </div>
                         <div class="profile-name">Jeanpierrer Núñez</div>
+
+                        <nav class="profile-actions" style="margin-bottom:10px">
+                            <a class="btn" href="#exp">Experiencia</a>
+                            <a class="btn" href="#form">Formación</a>
+                            <a class="btn" href="#comp">Competencias</a>
+                            <a class="btn" href="#idiomas">Idiomas</a>
+                            <a class="btn" href="#otras">Otras formaciones</a>
+                        </nav>
+
                         <div class="profile-actions">
                             <button class="btn" onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar mensaje</button>
                             <a class="btn" href="https://github.com/JeanpierPol" target="_blank">Abrir GitHub</a>
@@ -152,7 +161,7 @@
                         </div>
                     </aside>
                     <section class="profile-details">
-                        <h3>Experiencia Laboral</h3>
+                        <h3 id="exp">Experiencia Laboral</h3>
                         <ul>
                             <li>
                                 <strong>03/2024 – 06/2024 · Desarrollador web Shopify</strong> – ASTRIDTECH
@@ -177,13 +186,13 @@
                             </li>
                         </ul>
 
-                        <h3>Formación</h3>
+                        <h3 id="form">Formación</h3>
                         <ul>
                             <li><strong>01/2025 – 06/2025 · Máster en Desarrollo Web Full Stack</strong> – Evolve Academy</li>
                             <li><strong>09/2022 – 06/2024 · DAW</strong> – IES Enrique Tierno Galván</li>
                         </ul>
 
-                        <h3>Competencias Técnicas</h3>
+                        <h3 id="comp">Competencias Técnicas</h3>
                         <div class="retro-skills">
                             <div class="retro-skill"><span>PHP</span><div class="level mid"></div></div>
                             <div class="retro-skill"><span>Node.js</span><div class="level mid"></div></div>
@@ -203,7 +212,7 @@
                             <div class="retro-skill"><span>Java</span><div class="level mid"></div></div>
                         </div>
 
-                        <h3>Idiomas</h3>
+                        <h3 id="idiomas">Idiomas</h3>
                         <ul>
                             <li>Español (nativo)</li>
                             <li>Inglés (medio)</li>
@@ -214,7 +223,7 @@
                             <li>Disponibilidad para viajar</li>
                         </ul>
 
-                        <h3>Otras Formaciones</h3>
+                        <h3 id="otras">Otras Formaciones</h3>
                         <ul>
                             <li>11/2024 – 01/2025 · CFTIC Getafe – Desarrollador Spark Big Data Cloudera (200h)</li>
                             <li>09/2022 – 01/2023 · Vipper Sistemas – Gestión de sistemas informáticos (500h)</li>
@@ -255,7 +264,6 @@
             </div>
         </div>
         <div class="taskbar">
-            <!-- Lado izquierdo -->
             <div class="taskbar-left">
                 <div class="start-button" id="start-button">
                     <img src="https://i.ibb.co/M9F50Yf/windows-93.png" alt="Windows 93 Icono">
