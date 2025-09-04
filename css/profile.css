@@ -1,0 +1,68 @@
+/* Perfil estilo Windows */
+#profile .window-content {
+    padding: 0;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    height: 100%;
+}
+
+.profile-sidebar {
+    background-color: #e0e0e0;
+    border-right: 2px solid #a0a0a0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #000;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.profile-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile-list li {
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 4px;
+    cursor: default;
+}
+
+.profile-content {
+    background: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 6px;
+    column-gap: 10px;
+}
+
+.profile-label { font-weight: bold; }
+
+
