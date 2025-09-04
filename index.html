@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeanpierrer Núñez | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- Boot screen content -->
+    <div id="boot-screen">
+        <pre id="boot-text"></pre>
+    </div>
+
+    <div class="desktop-container" id="desktop-container">
+        <div class="desktop-icons">
+            <div class="icon" id="icon-about" data-window-id="about" draggable="true">
+                <img src="./public/icons/pdf.png" alt="Mi CV Icono">
+                <span>Mi CV.pdf</span>
+            </div>
+            <div class="icon" id="icon-experience" data-window-id="experience" draggable="true">
+                <img src="./public/icons/folder.png" alt="Experiencia Icono">
+                <span>Experiencia</span>
+            </div>
+            <div class="icon" id="icon-projects" data-window-id="projects" draggable="true">
+                <img src="./public/icons/folder.png" alt="Proyectos Icono">
+                <span>Proyectos</span>
+            </div>
+            <div class="icon" id="icon-contact" data-window-id="contact" draggable="true">
+                <img src="https://i.ibb.co/hV72nSw/mail.png" alt="Contacto Icono">
+                <span>Contacto</span>
+            </div>
+        </div>
+
+        <div id="about" class="window" style="left: 10%; top: 10%; width: 500px; height: 350px;">
+            <div class="window-title-bar">
+                <span>Mi CV.pdf</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-content cv-content">
+                <iframe src="./public/Jeanpierrer-ATS.pdf"></iframe>
+            </div>
+        </div>
+
+        <div id="experience" class="window" style="left: 20%; top: 20%; width: 550px; height: 400px;">
+            <div class="window-title-bar">
+                <span>Experiencia.exe</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <h3>Desarrollador web shopify (03/2024-06/2024)</h3>
+                <p>ASTRIDTECH</p>
+                <ul>
+                    <li>Diseñé y personalicé tiendas online utilizando Shopify, optimizando la experiencia del usuario y
+                        asegurando una navegación fluida.</li>
+                    <li>Configuré y personalicé temas de Shopify para adaptarlos a las necesidades del cliente.</li>
+                </ul>
+                <h3>Administrador de sistemas (02/2023-05/2023)</h3>
+                <p>DEIMA ordenadores</p>
+                <ul>
+                    <li>Migración y creación de páginas en WordPress para una experiencia de usuario óptima.</li>
+                    <li>Implementación de estrategias SEO que mejoran visibilidad y aumentan tráfico orgánico.</li>
+                </ul>
+                <h3>Desarrollador web PHP/Laravel (06/2021-07/2021)</h3>
+                <p>Recircular</p>
+                <ul>
+                    <li>Realicé ajustes visuales y de estilo en el panel de administración, incluyendo cambios en la
+                        paleta de colores, tipografía y diseño para mejorar la experiencia del usuario.</li>
+                    <li>Solucioné un fallo en la integración entre Laravel y la base de datos, asegurando la estabilidad
+                        del sistema.</li>
+                    <li>Colaboré con el equipo frontend para implementar nuevas funcionalidades y mantener la coherencia
+                        visual del producto.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects" class="window" style="left: 15%; top: 15%; width: 500px; height: 400px;">
+            <div class="window-title-bar">
+                <span>Proyectos.exe</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-toolbar">
+                <button class="toolbar-button" id="view-list-btn">Lista</button>
+                <button class="toolbar-button active" id="view-icons-btn">Iconos</button>
+            </div>
+            <div class="window-content">
+                <div id="project-files-container" class="view-icons">
+                    <div class="project-file" data-project-id="blog">
+                        <img src="./public/icons/folder.png" alt="Icono de Carpeta">
+                        <div class="project-file-info">
+                            <span>Mi_blog_personal.txt</span>
+                            <span>27/08/2025</span>
+                        </div>
+                    </div>
+                    <div class="project-file" data-project-id="landing">
+                        <img src="./public/icons/folder.png" alt="Icono de Carpeta">
+                        <div class="project-file-info">
+                            <span>Clon_Landing_Page.txt</span>
+                            <span>25/08/2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="window" style="left: 25%; top: 25%; width: 450px; height: 350px;">
+            <div class="window-title-bar">
+                <span>Mi_Perfil.inf</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Información de Perfil</h2>
+                <p><strong>Nombre:</strong> Jeanpierrer Núñez</p>
+                <p><strong>Rol:</strong> Desarrollador Web Full Stack</p>
+                <p><strong>Email:</strong> jeanpiernunezsanchez@gmail.com</p>
+                <p><strong>Teléfono:</strong> 633745308</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeanpierrer/"
+                        target="_blank">linkedin.com/in/jeanpierrer</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/JeanpierPol"
+                        target="_blank">github.com/JeanpierPol</a></p>
+            </div>
+        </div>
+
+        <!-- Contact window with form -->
+        <div id="contact" class="window" style="left: 40%; top: 40%; width: 450px; height: 350px;">
+            <div class="window-title-bar">
+                <span>CONTACTO.exe</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Enviar un Mensaje</h2>
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Tu Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Tu Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="taskbar">
+            <!-- Lado izquierdo -->
+            <div class="taskbar-left">
+                <div class="start-button" id="start-button">
+                    <img src="https://i.ibb.co/M9F50Yf/windows-93.png" alt="Windows 93 Icono">
+                    <span>Start</span>
+                </div>
+                <div class="start-menu" id="start-menu">
+                    <div class="start-menu-item" id="my-profile-btn">
+                        <img src="https://i.ibb.co/6y4tW6B/user.png" alt="User Icon">
+                        <span>Mi Perfil</span>
+                    </div>
+                    <div class="start-menu-item" id="shutdown-btn">
+                        <img src="https://i.ibb.co/4M0Qj4F/shutdown.png" alt="Shutdown Icon">
+                        <span>Apagar</span>
+                    </div>
+                    <div class="start-menu-item" id="restart-btn">
+                        <img src="https://i.ibb.co/9G73tLp/restart.png" alt="Restart Icon">
+                        <span>Reiniciar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centro: botones de ventanas -->
+            <div class="taskbar-buttons" id="taskbar-buttons"></div>
+
+            <div class="taskbar-clock start-button" id="clock">12:00 PM</div>
+        </div>
+
+
+        <div id="message-box" class="message-box">
+            <p id="message-box-text"></p>
+            <button onclick="document.getElementById('message-box').style.display='none';">Aceptar</button>
+        </div>
+
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title"></h2>
+                    <button class="modal-control close-modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-description"></p>
+                </div>
+                <div class="modal-footer">
+                    <a id="modal-link" href="#" target="_blank">
+                        <button>Ver Proyecto en GitHub</button>
+                    </a>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="confirmation-modal" class="confirmation-modal">
+            <div class="confirmation-box">
+                <p id="confirmation-text"></p>
+                <div class="confirmation-buttons">
+                    <button id="confirm-yes">Sí</button>
+                    <button id="confirm-no">No</button>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
