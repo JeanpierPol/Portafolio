@@ -1,4 +1,12 @@
-/* Variables y estilos base */
+@import url(boot.css);
+@import url(desktop.css);
+@import url(forms.css);
+@import url(modal.css);
+@import url(profile.css);
+@import url(projects.css);
+@import url(taskbar.css);
+@import url(window.css);
+
 :root {
     --green-1: #008080;
     /* verde actual (teal) */
@@ -20,6 +28,17 @@ body {
     height: 100vh;
     /* Fondo de cuadros en dos tonos de verde */
     background-color: var(--green-2);
-    background-image: conic-gradient(var(--green-1) 25%, var(--green-2) 0 50%, var(--green-1) 0 75%, var(--green-2) 0);
+    background-image: --green-1;
     background-size: 40px 40px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+

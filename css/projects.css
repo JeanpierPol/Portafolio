@@ -122,3 +122,24 @@
     font-size: 12px;
     display: block;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #project-files-container.view-icons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    #project-files-container.view-icons .project-file {
+        padding: 4px;
+    }
+    
+    #project-files-container.view-icons .project-file img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    #project-files-container.view-icons .project-file-info span {
+        font-size: 11px;
+    }
+}

@@ -65,3 +65,19 @@
     text-align: center;
     z-index: 2001;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+    
+    .message-box {
+        left: 10px;
+        right: 10px;
+        transform: translateY(-50%);
+        min-width: auto;
+    }
+}

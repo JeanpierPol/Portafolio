@@ -186,3 +186,43 @@
     height: 100%;
     border: none;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .window {
+        position: fixed !important;
+        top: 10px !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 50px !important;
+        width: auto !important;
+        height: auto !important;
+        min-width: auto;
+        min-height: auto;
+        z-index: 1000;
+    }
+    
+    .window.maximized {
+        top: 10px !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 50px !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    .window-content {
+        padding: 6px;
+    }
+    
+    .window-content p {
+        font-size: 14px;
+    }
+    
+    .window-content h2,
+    .window-content h3 {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+}

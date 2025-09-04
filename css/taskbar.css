@@ -128,3 +128,34 @@
     border-right: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .taskbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 2000;
+    }
+    
+    .start-button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    .start-button img {
+        height: 16px;
+        margin-right: 2px;
+    }
+    
+    .taskbar-buttons {
+        display: none; /* Ocultar botones de ventanas en móvil */
+    }
+    
+    .taskbar-clock {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

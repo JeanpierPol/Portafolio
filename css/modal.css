@@ -119,3 +119,17 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .confirmation-box {
+        width: 90%;
+        padding: 15px;
+    }
+}
