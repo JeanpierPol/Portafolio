@@ -7,6 +7,7 @@ export default class StartMenu {
     this.myProfileBtn = document.getElementById('my-profile-btn');
     this.shutdownBtn = document.getElementById('shutdown-btn');
     this.restartBtn = document.getElementById('restart-btn');
+    this.settingsBtn = document.getElementById('settings-btn');
     this.confirmationModal = document.getElementById('confirmation-modal');
     this.confirmationText = document.getElementById('confirmation-text');
     this.confirmYesBtn = document.getElementById('confirm-yes');
@@ -40,9 +41,19 @@ export default class StartMenu {
       if (this.startMenuEl) this.startMenuEl.style.display = 'none';
     });
 
+    this.settingsBtn && this.settingsBtn.addEventListener('click', () => {
+      this.windowManager.open('settings');
+      if (this.startMenuEl) this.startMenuEl.style.display = 'none';
+    });
+
     this.shutdownBtn && this.shutdownBtn.addEventListener('click', () => {
       if (!this.confirmationModal) return;
-      this.confirmationText.textContent = '¿Estás seguro de que quieres apagar el sistema?';
+      const lang = window.localStorage.getItem('pref_lang') || 'es';
+      const dict = {
+        es: '¿Estás seguro de que quieres apagar el sistema?',
+        en: 'Are you sure you want to shut down?'
+      };
+      this.confirmationText.textContent = dict[lang] || dict.es;
       this.confirmationModal.style.display = 'flex';
       this.currentAction = 'shutdown';
       if (this.startMenuEl) this.startMenuEl.style.display = 'none';
@@ -50,7 +61,12 @@ export default class StartMenu {
 
     this.restartBtn && this.restartBtn.addEventListener('click', () => {
       if (!this.confirmationModal) return;
-      this.confirmationText.textContent = '¿Estás seguro de que quieres reiniciar el sistema?';
+      const lang = window.localStorage.getItem('pref_lang') || 'es';
+      const dict = {
+        es: '¿Estás seguro de que quieres reiniciar el sistema?',
+        en: 'Are you sure you want to restart?'
+      };
+      this.confirmationText.textContent = dict[lang] || dict.es;
       this.confirmationModal.style.display = 'flex';
       this.currentAction = 'restart';
       if (this.startMenuEl) this.startMenuEl.style.display = 'none';

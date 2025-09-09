@@ -20,27 +20,31 @@
             
             <div class="icon" id="icon-experience" data-window-id="profile" draggable="true">
                 <img src="./public/icons/profile.png" alt="Mi Perfil Icono">
-                <span>Mi Perfil</span>
+                <span data-i18n="myProfile">Mi Perfil</span>
             </div>
             
             <div class="icon" id="icon-about" data-window-id="about" draggable="true">
                 <img src="./public/icons/pdf.png" alt="Mi CV Icono">
-                <span>Mi CV.pdf</span>
+                <span data-i18n="myCv">Mi CV.pdf</span>
             </div>
 
             <div class="icon" id="icon-projects" data-window-id="projects" draggable="true">
                 <img src="./public/icons/folder.png" alt="Proyectos Icono">
-                <span>Proyectos</span>
+                <span data-i18n="projects">Proyectos</span>
             </div>
             <div class="icon" id="icon-contact" data-window-id="contact" draggable="true">
                 <img src="public/icons/mail.png" alt="Contacto Icono">
-                <span>Contacto</span>
+                <span data-i18n="contact">Contacto</span>
+            </div>
+            <div class="icon" id="icon-settings" data-window-id="settings" draggable="true">
+                <img src="./public/icons/folder.png" alt="Configuraciones Icono">
+                <span data-i18n="settings">Configuraciones</span>
             </div>
         </div>
 
         <div id="about" class="window" style="left: 10%; top: 10%; width: 500px; height: 350px;">
             <div class="window-title-bar">
-                <span>Mi CV.pdf</span>
+                <span data-i18n="myCv">Mi CV.pdf</span>
                 <div class="window-controls">
                     <span class="window-control minimize">_</span>
                     <span class="window-control maximize">□</span>
@@ -54,7 +58,7 @@
 
         <div id="experience" class="window" style="left: 20%; top: 20%; width: 550px; height: 400px;">
             <div class="window-title-bar">
-                <span>Experiencia</span>
+                <span data-i18n="experience">Experiencia</span>
                 <div class="window-controls">
                     <span class="window-control minimize">_</span>
                     <span class="window-control maximize">□</span>
@@ -90,7 +94,7 @@
 
         <div id="projects" class="window" style="left: 15%; top: 15%; width: 500px; height: 400px;">
             <div class="window-title-bar">
-                <span>Proyectos</span>
+                <span data-i18n="projects">Proyectos</span>
                 <div class="window-controls">
                     <span class="window-control minimize">_</span>
                     <span class="window-control maximize">□</span>
@@ -134,7 +138,7 @@
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <span class="header-title">Mi Perfil</span>
+                    <span class="header-title" data-i18n="myProfile">Mi Perfil</span>
                 </div>
                 <div class="profile-body">
                     <aside class="profile-pane">
@@ -142,127 +146,22 @@
                             <img src="public/user.jpg" alt="Foto de perfil">
                         </div>
                         <div class="profile-name">Jeanpierrer Núñez</div>
-
-                        <nav class="profile-actions" style="margin-bottom:10px">
-                            <a class="btn" href="#exp">Experiencia</a>
-                            <a class="btn" href="#form">Formación</a>
-                            <a class="btn" href="#comp">Competencias</a>
-                            <a class="btn" href="#idiomas">Idiomas</a>
-                            <a class="btn" href="#otras">Otras formaciones</a>
-                        </nav>
-
                         <div class="profile-actions">
-                            <button class="btn"
-                                onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar
-                                mensaje</button>
+                            <button class="btn" data-i18n="sendMessage"
+                                onclick="document.getElementById('icon-contact').dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));">Enviar mensaje</button>
                         </div>
                     </aside>
                     <section class="profile-details">
-                        <h3 id="exp">Experiencia Laboral</h3>
+                        <h3 data-i18n="aboutMe">Sobre mí</h3>
+                        <p>
+                            Desarrollador web orientado a producto con enfoque en usabilidad, rendimiento y buen diseño.
+                            Me gusta construir interfaces claras y funcionales, y aprender tecnologías que aporten valor real.
+                        </p>
+                        <h3 data-i18n="socials">Redes sociales</h3>
                         <ul>
-                            <li>
-                                <strong>03/2024 – 06/2024 · Desarrollador web Shopify</strong> – ASTRIDTECH
-                                <ul>
-                                    <li>Diseñado y personalizado tiendas online en Shopify, optimizando UX y navegación.
-                                    </li>
-                                    <li>Configurado y personalizado temas según necesidades del cliente.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>02/2023 – 05/2023 · Administrador de sistemas</strong> – DEIMA ordenadores
-                                <ul>
-                                    <li>Migración y creación de páginas en WordPress para una UX óptima.</li>
-                                    <li>Estrategias SEO que mejoran visibilidad y tráfico orgánico.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>06/2021 – 07/2021 · Desarrollador web PHP/Laravel</strong> – Recircular
-                                <ul>
-                                    <li>Mejoras de backend con Laravel, optimizando funcionalidad y eficiencia.</li>
-                                    <li>Colaboración con frontend para integrar nuevas funcionalidades.</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <h3 id="form">Formación</h3>
-                        <ul>
-                            <li><strong>01/2025 – 06/2025 · Máster en Desarrollo Web Full Stack</strong> – Evolve
-                                Academy</li>
-                            <li><strong>09/2022 – 06/2024 · DAW</strong> – IES Enrique Tierno Galván</li>
-                        </ul>
-
-                        <h3 id="comp">Competencias Técnicas</h3>
-                        <div class="retro-skills">
-                            <div class="retro-skill"><span>PHP</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>Node.js</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>HTML</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>Bootstrap</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>Vue.js</span>
-                                <div class="level low"></div>
-                            </div>
-                            <div class="retro-skill"><span>SQL</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>GitHub</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>Python</span>
-                                <div class="level low"></div>
-                            </div>
-                            <div class="retro-skill"><span>Laravel</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>JavaScript</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>CSS</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>SASS</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>React</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>NoSQL</span>
-                                <div class="level mid"></div>
-                            </div>
-                            <div class="retro-skill"><span>Spark</span>
-                                <div class="level low"></div>
-                            </div>
-                            <div class="retro-skill"><span>Java</span>
-                                <div class="level mid"></div>
-                            </div>
-                        </div>
-
-                        <h3 id="idiomas">Idiomas</h3>
-                        <ul>
-                            <li>Español (nativo)</li>
-                            <li>Inglés (medio)</li>
-                        </ul>
-
-                        <h3>Información de Interés</h3>
-                        <ul>
-                            <li>Disponibilidad para viajar</li>
-                        </ul>
-
-                        <h3 id="otras">Otras Formaciones</h3>
-                        <ul>
-                            <li>11/2024 – 01/2025 · CFTIC Getafe – Desarrollador Spark Big Data Cloudera (200h)</li>
-                            <li>09/2022 – 01/2023 · Vipper Sistemas – Gestión de sistemas informáticos (500h)</li>
-                            <li>06/2022 – 07/2022 · Vipper Sistemas – Fundamentos de administración de bases de datos
-                                (60h)</li>
-                            <li>06/2022 – 07/2022 · Vipper Sistemas – Análisis y programación en Java (60h)</li>
-                            <li>05/2021 – 07/2021 · Fundación Tomillo – Desarrollador frontend (100h)</li>
-                            <li>09/2020 – 06/2021 · Fundación Tomillo – Desarrollador web Full Stack (1120h)</li>
+                            <li><a href="https://github.com/JeanpierPol" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">Twitter/X</a></li>
                         </ul>
                     </section>
                 </div>
@@ -272,7 +171,7 @@
         <!-- Contact window with form -->
         <div id="contact" class="window" style="left: 40%; top: 40%; width: 450px; height: 350px;">
             <div class="window-title-bar">
-                <span>CONTACTO</span>
+                <span data-i18n="contact">Contacto</span>
                 <div class="window-controls">
                     <span class="window-control minimize">_</span>
                     <span class="window-control maximize">□</span>
@@ -280,18 +179,18 @@
                 </div>
             </div>
             <div class="window-content">
-                <h2>Enviar un Mensaje</h2>
+                <h2 data-i18n="contactTitle">Enviar un Mensaje</h2>
                 <form id="contact-form" class="contact-form">
-                    <label for="name">Tu Nombre:</label>
+                    <label for="name" data-i18n="name">Tu Nombre:</label>
                     <input type="text" id="name" name="name" required>
 
-                    <label for="email">Tu Correo Electrónico:</label>
+                    <label for="email" data-i18n="email">Tu Correo Electrónico:</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="message">Mensaje:</label>
+                    <label for="message" data-i18n="message">Mensaje:</label>
                     <textarea id="message" name="message" required></textarea>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" data-i18n="send">Enviar</button>
                 </form>
             </div>
         </div>
@@ -299,20 +198,24 @@
             <div class="taskbar-left">
                 <div class="start-button" id="start-button">
                     <img src="https://i.ibb.co/M9F50Yf/windows-93.png" alt="Windows 93 Icono">
-                    <span>Start</span>
+                    <span data-i18n="start">Start</span>
                 </div>
                 <div class="start-menu" id="start-menu">
                     <div class="start-menu-item" id="my-profile-btn">
                         <img src="public/icons/profile.png" User Icon">
-                        <span>Mi Perfil</span>
+                        <span data-i18n="myProfile">Mi Perfil</span>
+                    </div>
+                    <div class="start-menu-item" id="settings-btn">
+                        <img src="public/icons/folder.png" alt="Settings Icon">
+                        <span data-i18n="settings">Configuraciones</span>
                     </div>
                     <div class="start-menu-item" id="shutdown-btn">
                         <img src="https://i.ibb.co/4M0Qj4F/shutdown.png" alt="Shutdown Icon">
-                        <span>Apagar</span>
+                        <span data-i18n="shutdown">Apagar</span>
                     </div>
                     <div class="start-menu-item" id="restart-btn">
                         <img src="https://i.ibb.co/9G73tLp/restart.png" alt="Restart Icon">
-                        <span>Reiniciar</span>
+                        <span data-i18n="restart">Reiniciar</span>
                     </div>
                 </div>
             </div>
@@ -353,6 +256,33 @@
                 <div class="confirmation-buttons">
                     <button id="confirm-yes">Sí</button>
                     <button id="confirm-no">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings window -->
+        <div id="settings" class="window" style="left: 30%; top: 22%; width: 420px; height: 260px;">
+            <div class="window-title-bar">
+                <span data-i18n="settings">Configuraciones</span>
+                <div class="window-controls">
+                    <span class="window-control minimize">_</span>
+                    <span class="window-control maximize">□</span>
+                    <span class="window-control close">X</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div style="display:grid; grid-template-columns:160px 1fr; gap:10px; align-items:center;">
+                    <label for="settings-language" data-i18n="language">Idioma</label>
+                    <select id="settings-language">
+                        <option value="es" data-i18n="spanish">Español</option>
+                        <option value="en" data-i18n="english">Inglés</option>
+                    </select>
+
+                    <label for="settings-theme" data-i18n="theme">Tema</label>
+                    <select id="settings-theme">
+                        <option value="light" data-i18n="light">Claro</option>
+                        <option value="dark" data-i18n="dark">Oscuro</option>
+                    </select>
                 </div>
             </div>
         </div>
