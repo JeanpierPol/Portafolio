@@ -7,6 +7,7 @@ import ModalManager from './modules/ModalManager.js';
 import ContactForm from './modules/ContactForm.js';
 import Clock from './modules/Clock.js';
 import Projects from './modules/Projects.js';
+import Settings from './modules/Settings.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const boot = new BootScreen(
@@ -37,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = new Projects(modalManager);
 
   const contactForm = new ContactForm(modalManager);
+
+  // Settings (theme + language)
+  const settings = new Settings();
+  settings.applySavedPreferences();
 
   // Toggle fast boot with F9
   document.addEventListener('keydown', (e) => {
