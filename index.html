@@ -265,7 +265,7 @@
         </div>
 
         <!-- Settings window -->
-        <div id="settings" class="window" style="left: 30%; top: 22%; width: 420px; height: 260px;">
+        <div id="settings" class="window" style="left: 30%; top: 22%; width: 460px; height: 300px;">
             <div class="window-title-bar">
                 <span data-i18n="settings">Configuraciones</span>
                 <div class="window-controls">
@@ -275,18 +275,29 @@
                 </div>
             </div>
             <div class="window-content">
-                <div style="display:grid; grid-template-columns:160px 1fr; gap:10px; align-items:center;">
-                    <label for="settings-language" data-i18n="language">Idioma</label>
-                    <select id="settings-language">
-                        <option value="es" data-i18n="spanish">Español</option>
-                        <option value="en" data-i18n="english">Inglés</option>
-                    </select>
-
-                    <label for="settings-theme" data-i18n="theme">Tema</label>
-                    <select id="settings-theme">
-                        <option value="light" data-i18n="light">Claro</option>
-                        <option value="dark" data-i18n="dark">Oscuro</option>
-                    </select>
+                <div class="tabs-bar">
+                    <button class="tab-button active" data-tab="tab-language" data-i18n="language">Idioma</button>
+                    <button class="tab-button" data-tab="tab-theme" data-i18n="theme">Tema</button>
+                </div>
+                <div class="tabs-content">
+                    <div id="tab-language" class="tab-pane active">
+                        <div class="form-grid">
+                            <label for="settings-language" data-i18n="language">Idioma</label>
+                            <select id="settings-language" class="taskbar-button">
+                                <option value="es" data-i18n="spanish">Español</option>
+                                <option value="en" data-i18n="english">Inglés</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="tab-theme" class="tab-pane">
+                        <div class="form-grid">
+                            <label for="settings-theme" data-i18n="theme">Tema</label>
+                            <select id="settings-theme" class="taskbar-button">
+                                <option value="light" data-i18n="light">Claro</option>
+                                <option value="dark" data-i18n="dark">Oscuro</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

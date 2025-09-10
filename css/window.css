@@ -141,6 +141,50 @@
     border-bottom: 2px solid var(--white);
 }
 
+/* Tabs (Win95 style) */
+.tabs-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.tab-button {
+    background-color: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 2px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    border-top: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+}
+
+.tabs-content {
+    background: var(--gray-1);
+    border-top: 2px solid var(--white);
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 8px;
+}
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
 .window-surface {
     background: #fff;
     border-top: 2px solid #fff;

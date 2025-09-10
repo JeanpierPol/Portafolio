@@ -101,6 +101,8 @@ export default class Settings {
     const themeSelect = document.getElementById('settings-theme');
     const langTaskbar = document.getElementById('taskbar-lang');
     const langMenu = document.getElementById('lang-menu');
+    const tabButtons = document.querySelectorAll('#settings .tab-button');
+    const tabPanes = document.querySelectorAll('#settings .tab-pane');
     if (langSelect) {
       langSelect.value = currentLang;
       langSelect.addEventListener('change', () => {
@@ -138,6 +140,21 @@ export default class Settings {
         if (!e.target.closest('#lang-menu') && !e.target.closest('#taskbar-lang')) {
           langMenu.style.display = 'none';
         }
+      });
+    }
+
+    // Tabs logic
+    if (tabButtons && tabButtons.length) {
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-tab');
+          if (!id) return;
+          tabButtons.forEach(b => b.classList.remove('active'));
+          tabPanes.forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          const pane = document.getElementById(id);
+          if (pane) pane.classList.add('active');
+        });
       });
     }
   }
