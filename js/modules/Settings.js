@@ -28,6 +28,7 @@ export default class Settings {
         language: 'Idioma',
         spanish: 'Español',
         english: 'Inglés',
+        aboutMeText: 'Desarrollador web orientado a producto con enfoque en usabilidad, rendimiento y buen diseño. Me gusta construir interfaces claras y funcionales, y aprender tecnologías que aporten valor real.',
         confirmShutdown: '¿Estás seguro de que quieres apagar el sistema?',
         confirmRestart: '¿Estás seguro de que quieres reiniciar el sistema?',
       },
@@ -55,6 +56,7 @@ export default class Settings {
         language: 'Language',
         spanish: 'Spanish',
         english: 'English',
+        aboutMeText: 'Product-oriented web developer focused on usability, performance, and good design. I enjoy building clear, functional interfaces and learning technologies that deliver real value.',
         confirmShutdown: 'Are you sure you want to shut down?',
         confirmRestart: 'Are you sure you want to restart?',
       }
@@ -97,13 +99,46 @@ export default class Settings {
   installUI(currentLang, currentTheme) {
     const langSelect = document.getElementById('settings-language');
     const themeSelect = document.getElementById('settings-theme');
+    const langTaskbar = document.getElementById('taskbar-lang');
+    const langMenu = document.getElementById('lang-menu');
     if (langSelect) {
       langSelect.value = currentLang;
-      langSelect.addEventListener('change', () => this.setLanguage(langSelect.value));
+      langSelect.addEventListener('change', () => {
+        this.setLanguage(langSelect.value);
+        if (langTaskbar) langTaskbar.textContent = langSelect.value.toUpperCase();
+        if (langMenu) langMenu.style.display = 'none';
+      });
     }
     if (themeSelect) {
       themeSelect.value = currentTheme;
       themeSelect.addEventListener('change', () => this.setTheme(themeSelect.value));
+    }
+    if (langTaskbar) {
+      langTaskbar.textContent = (currentLang || 'es').toUpperCase();
+      langTaskbar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!langMenu) return;
+        langMenu.style.display = langMenu.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+
+    if (langMenu) {
+      langMenu.addEventListener('click', (e) => {
+        const item = e.target.closest('.lang-menu-item');
+        if (!item) return;
+        const chosen = item.getAttribute('data-lang');
+        if (!chosen) return;
+        this.setLanguage(chosen);
+        if (langTaskbar) langTaskbar.textContent = chosen.toUpperCase();
+        if (langSelect) langSelect.value = chosen;
+        langMenu.style.display = 'none';
+      });
+      document.addEventListener('click', (e) => {
+        if (!langMenu) return;
+        if (!e.target.closest('#lang-menu') && !e.target.closest('#taskbar-lang')) {
+          langMenu.style.display = 'none';
+        }
+      });
     }
   }
 }

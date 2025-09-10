@@ -153,9 +153,8 @@
                     </aside>
                     <section class="profile-details">
                         <h3 data-i18n="aboutMe">Sobre mí</h3>
-                        <p>
-                            Desarrollador web orientado a producto con enfoque en usabilidad, rendimiento y buen diseño.
-                            Me gusta construir interfaces claras y funcionales, y aprender tecnologías que aporten valor real.
+                        <p data-i18n="aboutMeText">
+                            Desarrollador web orientado a producto con enfoque en usabilidad, rendimiento y buen diseño. Me gusta construir interfaces claras y funcionales, y aprender tecnologías que aporten valor real.
                         </p>
                         <h3 data-i18n="socials">Redes sociales</h3>
                         <ul>
@@ -221,7 +220,14 @@
             <!-- Centro: botones de ventanas -->
             <div class="taskbar-buttons" id="taskbar-buttons"></div>
 
-            <div class="taskbar-clock start-button" id="clock">12:00 PM</div>
+            <div class="taskbar-right">
+                <div class="taskbar-lang start-button" id="taskbar-lang" title="Idioma / Language">ES</div>
+                <div class="lang-menu" id="lang-menu">
+                    <div class="lang-menu-item" data-lang="es">ES Español</div>
+                    <div class="lang-menu-item" data-lang="en">EN English</div>
+                </div>
+                <div class="taskbar-clock start-button" id="clock">12:00</div>
+            </div>
         </div>
 
 
